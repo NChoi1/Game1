@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://p6njhetgauyw"]
+
+[ext_resource type="PackedScene" uid="uid://cas12dkdwygy8" path="res://frog.tscn" id="1_vigqh"]
+[ext_resource type="PackedScene" uid="uid://bdtol6cewmqyd" path="res://platform.tscn" id="2_mqyi5"]
+[ext_resource type="PackedScene" uid="uid://q8v13a6xdf5l" path="res://death.tscn" id="3_mqyi5"]
+
+[node name="world1" type="Node2D" unique_id=38272810]
+
+[node name="frog" parent="." unique_id=214278227 instance=ExtResource("1_vigqh")]
+position = Vector2(9.616535, -0.37945747)
+
+[node name="platform" parent="." unique_id=1832386107 instance=ExtResource("2_mqyi5")]
+position = Vector2(11, 43)
+
+[node name="death" parent="." unique_id=2136807077 instance=ExtResource("3_mqyi5")]
+position = Vector2(4, 108)
