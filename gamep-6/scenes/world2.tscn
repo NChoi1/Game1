@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bckvhlw636dn0"]
+
+[ext_resource type="PackedScene" uid="uid://c2ipsot5r544w" path="res://scenes/character.tscn" id="1_lueux"]
+
+[node name="Node2D" type="Node2D" unique_id=1992327859]
+
+[node name="platform" type="StaticBody2D" parent="." unique_id=386412710]
+position = Vector2(13, 247)
+
+[node name="Polygon2D" type="Polygon2D" parent="platform" unique_id=548644057]
+position = Vector2(-1490.7584, 87.716774)
+scale = Vector2(4.699152, 0.62831867)
+color = Color(0.6137647, 0.30324712, 1, 1)
+polygon = PackedVector2Array(403, 123, 637, 123, 637.8805, 172.75139, 639, 236, 403, 234)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platform" unique_id=610189870]
+position = Vector2(-1844.3104, 60.00676)
+scale = Vector2(4.7505264, 0.70380443)
+polygon = PackedVector2Array(473, 151, 705, 152, 706.30286, 265.6892, 473.48657, 255.74323)
+
+[node name="character" parent="." unique_id=853486292 instance=ExtResource("1_lueux")]
