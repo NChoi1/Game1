@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c445xe16mccde"]
+
+[ext_resource type="Texture2D" uid="uid://bhy6bi76p7cfr" path="res://photos/cake.png" id="1_o3vi6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(64, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(136, 65)
+
+[node name="cake" type="StaticBody2D" unique_id=1769299741]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1829462951]
+texture = ExtResource("1_o3vi6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1939353899]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.7887609, 0.0989063, 0.9999998, 0.41960785)
+
+[node name="eat" type="Area2D" parent="." unique_id=1589281164 groups=["cakegroup"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="eat" unique_id=414326252]
+position = Vector2(-1, 5.5)
+shape = SubResource("RectangleShape2D_yf5fn")
+debug_color = Color(0.9733421, 0, 0.43803772, 0.41960785)

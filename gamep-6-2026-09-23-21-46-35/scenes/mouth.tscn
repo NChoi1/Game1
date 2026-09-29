@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://xee5y78u3gau"]
+
+[ext_resource type="Script" uid="uid://dqf1u385typbn" path="res://scripts/mouth.gd" id="1_cr0hd"]
+[ext_resource type="Texture2D" uid="uid://oyti7umeldjr" path="res://photos/icon.svg" id="2_m3d0c"]
+
+[node name="mouth" type="Node2D" unique_id=892251123]
+script = ExtResource("1_cr0hd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1864714853]
+position = Vector2(0, 1)
+scale = Vector2(0.12109375, 0.08984375)
+texture = ExtResource("2_m3d0c")
+
+[node name="Timer" type="Timer" parent="." unique_id=404694219]
+wait_time = 0.25
+one_shot = true

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://n3cx7lbbgdym"]
+
+[ext_resource type="Texture2D" uid="uid://oyti7umeldjr" path="res://photos/icon.svg" id="1_nc7d6"]
+[ext_resource type="Script" uid="uid://brmes7s4tqdai" path="res://testprogress.gd" id="2_61qe1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_543el"]
+texture = ExtResource("1_nc7d6")
+
+[node name="testprogress" type="ProgressBar" unique_id=2146599639]
+offset_right = 214.0
+offset_bottom = 87.0
+theme_override_styles/fill = SubResource("StyleBoxTexture_543el")
+value = 100.0
+show_percentage = false
+script = ExtResource("2_61qe1")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=471053264]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 106.0
+offset_right = 144.0
+offset_bottom = 234.0
+value = 100.0
+texture_progress = ExtResource("1_nc7d6")
+
+[node name="add" type="Button" parent="." unique_id=224756827]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 11.0
+offset_right = 293.0
+offset_bottom = 42.0
+text = "+"
+
+[node name="subtract" type="Button" parent="." unique_id=198595904]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 11.0
+offset_right = 237.0
+offset_bottom = 42.0
+text = "-"
+
+[connection signal="pressed" from="add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="subtract" to="." method="_on_subtract_pressed"]
