@@ -24,6 +24,7 @@ scale = Vector2(4.7505264, 0.70380443)
 polygon = PackedVector2Array(473, 151, 705, 152, 706.30286, 265.6892, 473.48657, 255.74323)
 
 [node name="exit" type="Area2D" parent="." unique_id=1627775501 groups=["exit_to_world2"]]
+position = Vector2(243, 19)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="exit" unique_id=144443401]
 position = Vector2(362, 89)
@@ -60,7 +61,7 @@ position = Vector2(513, 279)
 [node name="terrain" parent="." unique_id=273711871 instance=ExtResource("3_6u51x")]
 
 [node name="enemy" parent="." unique_id=295968173 instance=ExtResource("4_6u51x")]
-position = Vector2(1084, 322)
+position = Vector2(1017.0001, 334.00003)
 
 [node name="cake" parent="." unique_id=1769299741 instance=ExtResource("5_x368c")]
 position = Vector2(794, 381)

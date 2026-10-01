@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var max_health: int = 50
 var current_health: int = max_health
 
-@export var attack_damage: int = 20
+@export var attack_damage: int = 10
 @export var attack_cooldown: float = 1.0 # Time between attacks in seconds
 var can_attack: bool = true
 var is_attacking: bool = false
@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 	
 	var direction = 0
 	
-	# Chase player along the X-axis if detected and not playing an attack animation
+	# Chase player 
 	if target_player and not is_attacking:
 		direction = sign(target_player.global_position.x - global_position.x)
 		velocity.x = direction * move_speed
@@ -47,23 +47,23 @@ func _physics_process(delta: float) -> void:
 		else:
 			animatedsprite.play("idle")
 		
-	# Apply knockback force if present and clear it instantly
+	# Apply knockback force
 	if knockback_velocity != Vector2.ZERO:
 		velocity.y = knockback_velocity.y
 		knockback_velocity = Vector2.ZERO
 
 	move_and_slide()
 
-# --- Attack System ---
+#Attack System
 func perform_attack() -> void:
 	can_attack = false
 	is_attacking = true
 	
-	# Play attack animation if you have one, or fallback to default
+	# Play attack animation
 	if animatedsprite.sprite_frames.has_animation("attack"):
 		animatedsprite.play("attack")
 	
-	# Deal damage to player if they have a take_damage function
+	# Deal damage to player
 	if target_player and target_player.has_method("take_damage"):
 		target_player.take_damage(attack_damage)
 		
@@ -84,7 +84,7 @@ func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body == target_player:
 		player_in_attack_range = false
 
-# --- Health & Damage Handler ---
+#Health & Damage Handler
 func take_damage(amount: int) -> void:
 	current_health -= amount
 	print("Enemy hit! Remaining health: ", current_health)
@@ -100,7 +100,7 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	queue_free()
 
-# --- Vertical Hit Hop ---
+#Vertical Hit Hop
 func take_knockback(hit_source_position: Vector2, force: float = 250.0) -> void:
 	knockback_velocity = Vector2(0.0, -force)
 

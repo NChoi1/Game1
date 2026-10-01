@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	# Spit animation logic
+	# Spit animation 
 	if Input.is_action_just_pressed("fire") and not (animatedsprite.animation == "spit" and animatedsprite.is_playing()):
 		animatedsprite.play("spit")
 
@@ -71,7 +71,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-# --- Health, Damage & Healing ---
+#Health, Damage & Healing
 func heal(amount: int) -> void:
 	current_health = min(current_health + amount, max_health)
 	if health_bar:
@@ -89,7 +89,7 @@ func die() -> void:
 	Engine.time_scale = 1.0 
 	get_tree().call_deferred("reload_current_scene")
 
-# --- Signal Connections ---
+#Signal Connections
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("death"):
 		Engine.time_scale = 1.0
@@ -116,7 +116,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	_on_area_2d_area_entered(area)
 
-# --- Knockback handling (Hit-stop removed) ---
+#Knockback handling
 func take_damage_and_knockback(hit_source: Area2D) -> void:
 	knockback_velocity = Vector2(0.0, -250.0)
 

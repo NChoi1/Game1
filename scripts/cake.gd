@@ -26,11 +26,8 @@ func _on_body_exited(body: Node2D) -> void:
 		player_ref = null
 
 func give_reward() -> void:
-	print("Cake eaten! Reward granted.")
-	
-	# Heal player if reference exists
+	# Heal player
 	if player_ref and player_ref.has_method("heal"):
 		player_ref.heal(heal_amount)
-	
 	# Remove cake from scene
 	queue_free()

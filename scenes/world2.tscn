@@ -19,4 +19,4 @@ scale = Vector2(4.7505264, 0.70380443)
 polygon = PackedVector2Array(473, 151, 705, 152, 706.30286, 265.6892, 473.48657, 255.74323)
 
 [node name="character" parent="." unique_id=853486292 instance=ExtResource("1_lueux")]
-position = Vector2(-1, -86)
+position = Vector2(-467, -50)
