@@ -18,8 +18,8 @@ debug_color = Color(0.83664846, 0, 0.14003122, 0.41960785)
 color = Color(0.7486191, 0, 0.1483793, 1)
 polygon = PackedVector2Array(-113.966675, -1, -113.93334, 1.0333334, 114.06667, 1.0333334, 114.06667, -1)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=61902562]
+[node name="Area2D" type="Area2D" parent="." unique_id=61902562 groups=["death"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1444013313 groups=["death"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1444013313]
 position = Vector2(0.48332506, 0.016666668)
 shape = SubResource("RectangleShape2D_qhgdi")

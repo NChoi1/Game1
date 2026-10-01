@@ -10,7 +10,7 @@
 position = Vector2(9.616535, -0.37945747)
 
 [node name="platform" parent="." unique_id=1832386107 instance=ExtResource("2_mqyi5")]
-position = Vector2(11, 43)
+position = Vector2(9, 42)
 
 [node name="death" parent="." unique_id=2136807077 instance=ExtResource("3_mqyi5")]
 position = Vector2(4, 108)
