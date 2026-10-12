@@ -5,8 +5,8 @@
 [node name="background" type="Node2D" unique_id=742019360]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1177653681]
-scroll_scale = Vector2(20, 20)
-repeat_size = Vector2(20, 20)
+scroll_scale = Vector2(100, 100)
+repeat_size = Vector2(500, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=322119254]
