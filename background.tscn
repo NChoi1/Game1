@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cbr5vx21elo30"]
+
+[ext_resource type="Texture2D" uid="uid://oyti7umeldjr" path="res://photos/icon.svg" id="1_oabld"]
+
+[node name="background" type="Node2D" unique_id=742019360]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1177653681]
+scroll_scale = Vector2(20, 20)
+repeat_size = Vector2(20, 20)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=322119254]
+position = Vector2(-13.499992, 105.50003)
+scale = Vector2(4.6796875, 4.632813)
+texture = ExtResource("1_oabld")
